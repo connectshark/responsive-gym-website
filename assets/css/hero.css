@@ -1,0 +1,66 @@
+.hero {
+  margin-top: calc(var(--header-height) * -1);
+  height: 100vh;
+  padding-top: var(--header-height);
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: center bottom, center;
+  background-size: 350px, 100%;
+  background-image:
+    url('../img/home-img.png'),
+    linear-gradient(140deg, transparent 70%, var(--primary) 70%);
+}
+.hero .container {
+  width: min(1200px, 90%);
+  margin: auto;
+  text-align: center;
+  padding: 2rem 0 0;
+}
+
+.hero .container h3,
+.hero .container h2 {
+  font-size: 2rem;
+  line-height: 2;
+  font-weight: bold;
+}
+.hero .container h3 {
+  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-width: 1px;
+  color: transparent;
+}
+.hero .container p {
+  margin-bottom: 2rem;
+}
+.hero .container .start-btn{
+  background-color: var(--primary);
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+}
+.hero .container .start-btn span,
+.hero .container .start-btn i {
+  vertical-align: middle;
+}
+@media screen and (min-width: 1024px) {
+  .hero {
+    background-position: center bottom, center;
+    background-size: 700px, 100%;
+    background-position: 95% 100%, 100%;
+    background-image:
+      url('../img/home-img.png'),
+      linear-gradient(120deg, transparent 65%, var(--primary) 65%);
+  }
+  .hero .container {
+    text-align: left;
+    padding: 120px 0 0 0;
+  }
+  .hero .container h3,
+  .hero .container h2 {
+    line-height: 1.5;
+  }
+  .hero .container h2 {
+    font-size: 5rem;
+  }
+  .hero .container p {
+    width: 35%;
+  }
+}

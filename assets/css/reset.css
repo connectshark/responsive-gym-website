@@ -1,0 +1,22 @@
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+}
+a {
+  color: #fff;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1rem;
+  font-family: 'Red Hat Display', sans-serif;
+  background-color: var(--background);
+  min-height: 100vh;
+  color: #fff;
+  overflow-x: hidden;
+}

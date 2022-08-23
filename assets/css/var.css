@@ -1,0 +1,9 @@
+:root {
+  --primary: #ACCD33;
+  --palette: #F2FEDC;
+  --primary-dark: #006E62;
+  --primary-deep-dark: #1E3800;
+  --background: #101717;
+  --background-opacity: #10171799;
+  --header-height: 80px;
+}

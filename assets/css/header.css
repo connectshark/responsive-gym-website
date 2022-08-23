@@ -1,0 +1,96 @@
+header.header {
+  position: sticky;
+  top: 0;
+}
+header.header .container{
+  padding: 0 1rem;
+  width: min(1200px, 100%);
+  margin: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+header.header .container .logo {
+  color: #fff;
+}
+header.header .container .logo img,
+header.header .container .logo span {
+  vertical-align: middle;
+}
+header.header .container .logo span {
+  font-weight: bold;
+  display: inline-block;
+  margin: 0 0 0 .5rem;
+  line-height: var(--header-height);
+}
+
+header.header .container .menu-btn {
+  cursor: pointer;
+}
+
+header.header .container .menu-list {
+  position: absolute;
+  height: 100vh;
+  width: min(400px, 80%);
+  background-color: var(--background-opacity);
+  backdrop-filter: blur(10px);
+  top: 0;
+  right: -100%;
+  padding: 5rem 0 0 2rem;
+  box-sizing: border-box;
+  border-left: 1px solid var(--palette);
+  transition: right .3s ease;
+}
+header.header .container .menu-list li {
+  margin-bottom: 1rem;
+}
+header.header .container .menu-list li a {
+  line-height: 3rem;
+}
+header.header .container .menu-list li button {
+  padding: 1rem 1.5rem;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+header.header .container .menu-list .close-btn {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+  cursor: pointer;
+}
+header.header .container .menu-list.active {
+  right: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  header.header .container .menu-list {
+    position: static;
+    height: auto;
+    padding: 0;
+    border-left: none;
+    font-size: 0;
+    width: max-content;
+    background-color: transparent;
+    backdrop-filter: none;
+  }
+  header.header .container .menu-list li {
+    margin-bottom: 0;
+    display: inline-block;
+    margin: 0 1rem;
+    background-color: transparent;
+  }
+  header.header .container .menu-list li a {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+  header.header .container .menu-list .close-btn {
+    display: none;
+  }
+  header.header .container .menu-btn {
+    display: none;
+  }
+}
