@@ -1,0 +1,110 @@
+.calculate .sub-title{
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+.calculate .sub-title span:first-child {
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+}
+
+.calculate {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  width: min(1200px, 90%);
+  margin: 0 auto 4rem;
+  gap: 2rem;
+}
+.calculate img {
+  width: 50%;
+  margin: auto;
+}
+.calculate .description {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+.calculate .bar {
+  position: relative;
+}
+.calculate .bar input {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  padding: 1.5rem 2rem;
+  box-sizing: border-box;
+  background-color: var(--background);
+  outline: 1px solid var(--primary);
+  color: #fff;
+  font-size: 1rem;
+  appearance: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.calculate .bar label {
+  position: absolute;
+  right: 2rem;
+  top: 1.3rem;
+}
+.calculate .calculate-btn {
+  border: none;
+  background-color: var(--primary);
+  padding: 1.5rem 0;
+  cursor: pointer;
+}
+.calculate .calculate-btn span,
+.calculate .calculate-btn i{
+  vertical-align: middle;
+}
+.calculate .result{
+  min-height: 1rem;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .calculate {
+    grid-template-columns: 20% 20% auto;
+    grid-template-rows: repeat(7, min-content);
+    gap: 2rem;
+  }
+  .calculate img {
+    grid-row: 1 / 8;
+    grid-column: 3 / 4;
+    width: 50%;
+  }
+  .calculate .sub-title{
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    text-align: left;
+  }
+  .calculate .description {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+    text-align: left;
+  }
+  .calculate .bar.height {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+  .calculate .bar.weight {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+  }
+  .calculate .calculate-btn {
+    grid-column: 1 / 3;
+    grid-row: 5 / 6;
+  }
+  .calculate .result {
+    grid-column: 1 / 3;
+    grid-row: 6 / 7;
+  }
+}

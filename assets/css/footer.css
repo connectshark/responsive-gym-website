@@ -1,0 +1,132 @@
+.footer .container {
+  width: min(1200px, 90%);
+  margin: auto;
+}
+.subscribe {
+  margin-bottom: 2rem;
+}
+.subscribe .logo {
+  margin-bottom: 1rem;
+}
+.subscribe .logo img {
+  width: 20px;
+}
+.subscribe .logo img,
+.subscribe .logo span {
+  vertical-align: middle;
+  display: inline-block;
+}
+.subscribe .logo span {
+  font-weight: bold;
+}
+.subscribe p {
+  width: 50%;
+  margin-bottom: 1rem;
+}
+.subscribe input[type=email],
+.subscribe input[type=submit] {
+  width: 100%;
+}
+.subscribe input[type=email] {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background-color: var(--background);
+  outline: 1px solid var(--primary);
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.subscribe input[type=submit] {
+  padding: 1rem 0;
+  font-size: 1rem;
+  background-color: var(--primary);
+  border: none;
+  cursor: pointer;
+}
+.subscribe .result {
+  min-height: 1rem;
+  font-size: 1rem;
+}
+.nav-group {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.nav-group ul {
+  width: 50%;
+  margin-bottom: 2rem;
+}
+.nav-group ul li h4 {
+  font-weight: bold;
+  line-height: 3;
+}
+.nav-group ul li a {
+  line-height: 2;
+  color: #aaa;
+}
+
+.copyright h5 {
+  font-size: 1rem;
+  line-height: 4;
+}
+.copyright .link-group a {
+  width: 2rem;
+  height: 2rem;
+  color: var(--background);
+  background-color: var(--primary);
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+}
+.copyright .link-group a:not(:first-child) {
+  margin-left: .5rem;
+}
+.copyright .link-group a i {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  vertical-align: middle;
+}
+
+@media screen and (min-width: 1024px) {
+  .footer .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  .subscribe {
+    width: 30%;
+  }
+  .subscribe .bar {
+    font-size: 0;
+  }
+  .subscribe .bar input{
+    display: inline-block;
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+  .subscribe .bar input[type=email] {
+    width: 60%;
+  }
+  .subscribe .bar input[type=submit] {
+    width: 30%;
+    margin-left: 10%;
+  }
+  .nav-group {
+    width: 50%;
+    justify-content: space-between;
+  }
+  .nav-group ul {
+    width: 33%;
+  }
+  .copyright {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .copyright .link-group{
+    order: 1;
+  }
+}

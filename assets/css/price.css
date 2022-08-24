@@ -1,0 +1,101 @@
+.price {
+  margin-bottom: 4rem;
+}
+.price .container {
+  width: min(1200px, 100%);
+  margin: auto;
+}
+.price .container h2,
+.price .container .sub-title{
+  text-align: center;
+}
+.price .container h2 {
+  color: var(--primary);
+}
+.price .container .sub-title{
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+.price .container .sub-title span:first-child {
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+}
+.price-group {
+  width: 70%;
+  margin: auto;
+}
+.price-group .price-item {
+  background-color: var(--primary-deep-dark);
+  box-sizing: border-box;
+  padding: 3rem;
+  margin-bottom: 2rem;
+}
+.price-group .price-item img {
+  width: 50px;
+  object-fit: cover;
+  background-color: #999B92;
+  border-radius: 50%;
+  padding: .5rem;
+}
+.price-group .price-item h3 {
+  font-size: 1rem;
+  line-height: 2;
+}
+.price-group .price-item .price {
+  font-size: 1.5rem;
+  line-height: 2;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.price-group .price-item ul {
+  margin-bottom: 2rem;
+}
+.price-group .price-item ul li {
+  margin-bottom: 1rem;
+}
+.price-group .price-item ul li:not(:first-child):not(:nth-child(2)) {
+  opacity: .6;
+}
+.price-group .price-item ul li i {
+  vertical-align: middle;
+  color: var(--primary);
+}
+.price-group .price-item ul li span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.price-group .price-item button {
+  width: 100%;
+  border: none;
+  background-color: #fff;
+  padding: 1rem 0;
+  cursor: pointer;
+}
+.price-group .price-item button span {
+  display: inline-block;
+}
+.price-group .price-item button span,
+.price-group .price-item button i {
+  vertical-align: middle;
+}
+
+.price-group .price-item.price-active {
+  background-color: var(--primary);
+  color: var(--primary-deep-dark);
+}
+.price-group .price-item.price-active ul li i {
+  color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+  .price-group {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .price-group .price-item {
+    width: 28%;
+  }
+}

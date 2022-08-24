@@ -3,6 +3,7 @@
     linear-gradient(-114deg, transparent 80%, #7F9827 80%),
     linear-gradient(-124deg, transparent 75%, #8FAC2C 75%),
     linear-gradient(-135deg, transparent 70%, var(--primary) 70%);
+  margin-bottom: 4rem;
 }
 .reason .container {
   width: min(1200px, 100%);
