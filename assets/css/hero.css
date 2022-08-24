@@ -40,6 +40,18 @@
 .hero .container .start-btn i {
   vertical-align: middle;
 }
+.sponsor {
+  font-size: 0;
+  text-align: center;
+  padding: 3rem 0;
+}
+.sponsor img{
+  display: inline-block;
+  object-fit: cover;
+  margin: 0 2%;
+  width: min(200px, 20%);
+}
+
 @media screen and (min-width: 1024px) {
   .hero {
     background-position: center bottom, center;
