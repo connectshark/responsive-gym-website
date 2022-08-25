@@ -7,6 +7,7 @@ const navLinks = document.querySelectorAll('.nav-link')
 const programSection = document.querySelector('.program')
 const reasonSection = document.querySelector('.reason')
 const priceSection = document.querySelector('.price')
+const calculateForm = document.querySelector('.calculate')
 
 const sectionGroup = [heroSection, programSection, reasonSection, priceSection]
 
@@ -15,7 +16,6 @@ const options = {
 }
 const stickyObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    console.log(entry)
     if (!entry.isIntersecting) {
       headerStickySection.classList.add('dark')
     } else {
@@ -42,8 +42,31 @@ const observe = new IntersectionObserver(entries => {
 const toggleMenu = () => {
   mobileMenu.classList.toggle('active')
 }
+const closeMenu = () => {
+  mobileMenu.classList.remove('active')
+}
+
+navLinks.forEach(link => {
+  link.addEventListener('click', closeMenu)
+})
+
+const calculatorBMI = event => {
+  event.preventDefault()
+  const heightEle = document.querySelector('#height')
+  const weightEle = document.querySelector('#weight')
+  const bmiEle = document.querySelector('.bmi-result')
+  const heightValue = heightEle.value
+  const weightValue = weightEle.value
+  let w = parseFloat(weightValue)
+  let h = parseFloat(heightValue) / 100
+  const bmi = (w/(h*h)).toFixed(2)
+  bmiEle.innerHTML = 'Your BMI is ' + bmi
+  heightEle.value = ''
+  weightEle.value = ''
+}
 
 stickyObserver.observe(heroSection)
 menuBtn.addEventListener('click', toggleMenu)
 closeBtn.addEventListener('click', toggleMenu)
 sectionGroup.forEach(section => observe.observe(section))
+calculateForm.addEventListener('submit', calculatorBMI)

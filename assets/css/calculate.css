@@ -65,7 +65,7 @@ input[type=number] {
 .calculate .calculate-btn i{
   vertical-align: middle;
 }
-.calculate .result{
+.calculate .bmi-result{
   min-height: 1rem;
   font-size: 1rem;
 }

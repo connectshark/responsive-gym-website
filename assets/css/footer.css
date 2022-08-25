@@ -43,7 +43,7 @@
   border: none;
   cursor: pointer;
 }
-.subscribe .result {
+.subscribe .email-result {
   min-height: 1rem;
   font-size: 1rem;
 }

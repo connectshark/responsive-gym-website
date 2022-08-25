@@ -6,8 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="./assets/js/main.js" defer></script>
+  <script src="./assets/js/mail.js" defer></script>
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init('hzAph-Kjy8KDvJdFw')
+    })();
+  </script>
   <link rel="stylesheet" href="./assets/css/main.css">
   <title>Responsive Gym Website</title>
 </head>
@@ -51,7 +58,8 @@
         <p>In there we will help you to shape and build your ideal body and live your life to the fullest.</p>
         <button class="start-btn">
           <span>Get Started </span>
-          <i class="ri-arrow-right-line ri-xl"></i></button>
+          <i class="ri-arrow-right-line ri-xl"></i>
+        </button>
       </div>
     </section>
     <div class="sponsor">
@@ -275,7 +283,7 @@
         <span>Calculate Now</span>
         <i class="ri-arrow-right-line ri-xl"></i>
       </button>
-      <div class="result"></div>
+      <div class="bmi-result"></div>
       <img src="./assets/img/calculate-img.png" alt="calculate-cover">
 
     </form>
@@ -289,10 +297,10 @@
         </div>
         <p>Subscribe for company updates below.</p>
         <div class="bar">
-          <input type="email" placeholder="Your Email" required>
+          <input class="email-bar" type="email" placeholder="Your Email" required name="user_mail">
           <input type="submit" value="Subscribe">
         </div>
-        <div class="result"></div>
+        <div class="email-result"></div>
       </form>
       <nav class="nav-group">
         <ul>
