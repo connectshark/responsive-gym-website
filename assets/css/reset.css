@@ -16,7 +16,10 @@ body {
   font-size: 1rem;
   font-family: 'Red Hat Display', sans-serif;
   background-color: var(--background);
-  min-height: 100vh;
   color: #fff;
   overflow-x: hidden;
+}
+
+section {
+  scroll-margin: 4.5rem 0 0 0;
 }

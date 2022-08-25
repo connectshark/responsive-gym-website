@@ -1,6 +1,6 @@
 .hero {
   margin-top: calc(var(--header-height) * -1);
-  height: 100vh;
+  min-height: 667px;
   padding-top: var(--header-height);
   box-sizing: border-box;
   background-repeat: no-repeat;
@@ -43,7 +43,7 @@
 .sponsor {
   font-size: 0;
   text-align: center;
-  padding: 3rem 0;
+  padding: 4rem 0;
 }
 .sponsor img{
   display: inline-block;
@@ -54,6 +54,7 @@
 
 @media screen and (min-width: 1024px) {
   .hero {
+    min-height: 100vh;
     background-position: center bottom, center;
     background-size: 700px, 100%;
     background-position: 95% 100%, 100%;

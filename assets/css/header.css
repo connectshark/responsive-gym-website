@@ -1,6 +1,9 @@
 header.header {
   position: sticky;
   top: 0;
+  z-index: 5;
+  background-color: transparent;
+  transition: background-color .3s ease;
 }
 header.header .container{
   padding: 0 1rem;
@@ -32,7 +35,7 @@ header.header .container .menu-btn {
 }
 
 header.header .container .menu-list {
-  position: absolute;
+  position: fixed;
   height: 100vh;
   width: min(400px, 80%);
   background-color: var(--background-opacity);
@@ -49,6 +52,9 @@ header.header .container .menu-list li {
 }
 header.header .container .menu-list li a {
   line-height: 3rem;
+}
+header.header .container .menu-list li a.active-link {
+  color: var(--primary);
 }
 header.header .container .menu-list li button {
   padding: 1rem 1.5rem;
@@ -93,4 +99,8 @@ header.header .container .menu-list.active {
   header.header .container .menu-btn {
     display: none;
   }
+}
+
+header.dark {
+  background-color: var(--background);
 }
